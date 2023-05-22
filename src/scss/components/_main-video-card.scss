@@ -1,0 +1,121 @@
+.main-video-card{
+  @extend .card;
+
+  max-width: 1029px;
+  max-height: 642px;
+
+  background-color: transparent;
+  border: 5px solid transparent;
+  border-radius: 8px 8px 4px 4px;
+
+  cursor: pointer;
+
+  .card-img-overlay-container{
+    background-color: $gray-800;
+  }
+
+  @media screen and (min-width: 992px){
+    position: relative;
+  }
+
+  .img-overlay{
+    opacity: 0;
+    transition: ease-out 400ms all;
+  }
+
+  .card-img-top{
+    @media screen and (min-width: 992px){
+      border-radius: 4px;
+    }
+  }
+
+  .video-play-button{
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+
+      @media screen and (min-width: 992px){
+        position: unset;
+
+        width: 60px;
+        height: 60px;
+        margin-left: 2.625rem;
+        margin-bottom: 1rem;
+
+        display: block;
+
+        & > svg{
+          width: 60px;
+          height: 60px;
+      }
+    } 
+  }
+
+  .card-body{
+    background-color: $gray-800;
+    border: none;
+    border-radius: 0 0 4px 4px;
+    
+    @media screen and (min-width: 992px){
+      padding: 0;
+      margin-left: 2.625rem;
+      margin-bottom: 3.125rem;
+
+      background-color: transparent;
+    }
+
+    .card-hat{
+      display: block;
+      color: $red-300;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      line-height: 16px;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-title{
+      max-width: 715px;
+      
+      font-size: 1rem;
+      color: $white;
+      line-height: 22px;
+
+      @media screen and (min-width: 992px){
+        font-size: 1.625rem;
+      }
+    }  
+  }
+
+  .main-video-card-content{
+    @media screen and (min-width: 992px){
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.main-video-card:hover{
+
+  border-color: $red-300;
+
+  .img-overlay{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  
+    width: 100%;
+    height: 100%;
+  
+    background-color: $black-50p;
+    background-image: $black-gradient-2;
+    border-radius: 4px;
+
+    opacity: 1;
+  }
+
+  .video-play-button > svg > path{
+    fill: $red-300;
+  }
+
+}

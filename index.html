@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+  <link href="dist/css/styles.min.css" rel="stylesheet">
+
+  <title>Teste FrontEnd - SEOX</title>
+</head>
+
+<body>
+  <div class="bg-shape"></div>
+  <div class="content">
+    <div class="container px-4 py-4 negative-margin-mobile">
+      <div class="row mb-4">
+
+        <div class="col">
+          <header class="header">
+
+            <h1 class="header-title">Vídeos</h1>
+
+            <div class="header-buttons">
+              <a href="#" class="header-buttons-more">
+                <span>Veja Mais</span>
+                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.999999 11L6 6L1 0.999999" stroke="#707070" stroke-width="1.5" />
+                </svg>
+              </a>
+
+              <nav class="header-buttons-controls">
+                <button type="button" class="controls-prev" id="up">
+                  <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.6665 8.66667L7.99984 2L1.33317 8.66667" stroke="#F6D0D1" stroke-width="1.5" />
+                  </svg>
+                </button>
+
+                <button type="button" class="controls-next" id="down">
+                  <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 0.999999L8 8L15 1" stroke="#F6D0D1" stroke-width="1.5" />
+                  </svg>
+                </button>
+              </nav>
+
+            </div><!-- /.header-buttons -->
+          </header>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-12 col-xl-9 pb-4" id="main-card"></div><!-- conteúdo do destaque -->
+
+        <div class="col-12 col-xl-3">
+          <aside>
+            <div class="container ps-0">
+              <div class="row scrollable-area" id="scrollable-cards-area"></div><!-- /.row -->
+            </div><!-- /.container -->
+          </aside>
+        </div><!-- /.col-12 -->
+
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </div><!-- /.content -->
+
+  <script src="dist/js/slider.js"></script>
+  <script src="dist/js/axios.min.js"></script>
+  <script src="dist/js/api.js"></script>
+</body>
+
+</html>

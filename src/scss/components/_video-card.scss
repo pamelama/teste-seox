@@ -1,0 +1,84 @@
+.video-card{
+  @extend .card;
+
+  min-width: 292px;
+  max-width: 327px;
+  min-height: 310px;
+
+  background-color: transparent;
+  border: 3px solid transparent;
+  border-radius: 8px 8px 4px 4px;
+
+  cursor: pointer;
+
+  transition: ease-out 400ms all;
+
+  .card-img-top{
+    max-width: 327px;
+    max-height: 204px;
+    transition: ease-out 400ms all;
+  }
+
+  .video-play-button{
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+
+    transition: ease-out 400ms all;
+  }
+
+  .video-comments-info{
+    display: none;
+
+    position: absolute;
+    right: 16px;
+    top: 157px;
+
+    color: $red-100;
+    font-size: 0.75rem;
+
+    transition: ease-out 400ms all;
+
+    & > svg{
+      margin-right: 8px;
+    }
+  }
+
+  .card-body{
+    background-color: $gray-800;
+    border: none;
+    border-radius: 0 0 4px 4px;
+
+      .card-hat{
+        display: block;
+        color: $red-300;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        line-height: 16px;
+        margin-bottom: 0.5rem;
+      }
+
+      .card-title{
+        font-size: 1rem;
+        color: $white;
+        line-height: 22px;
+      }
+  }
+}
+
+.video-card:hover{
+  border-color: $red-300;
+
+  .card-img-top{
+    filter: opacity(50%);
+  }
+
+  .video-play-button > svg > path{
+    fill: $red-300;
+  }
+
+  .video-comments-info{
+    display: block;
+  }
+
+}

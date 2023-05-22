@@ -1,0 +1,110 @@
+.header{
+  padding: 1rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: $gray-800;
+  border-radius: 8px;
+}
+
+.header-title{
+  color: $red-300;
+  text-transform: uppercase;
+  font-size: 1.75rem;
+  line-height: 2.125rem;
+}
+
+.header-buttons{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-buttons-more{
+  min-width: 3rem;
+  padding: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+
+  color: $gray-700;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  line-height: 1rem;
+
+  background: transparent;
+  box-shadow: 0px 0px 0px 2px $gray-700 inset; 
+  border-radius: 4px;
+
+  transition: ease-out 300ms all;
+
+    span{
+      display: none;
+    }
+
+    &:hover{
+        background-color: $gray-900;
+        box-shadow: 0px 0px 0px 2px $gray-900 inset;
+    }
+
+    &:hover > span{
+      color: $red-300;
+    }
+
+    &:hover > svg > path{
+      stroke: $red-300;
+    }
+  }
+
+.header-buttons-controls{
+  display: none;
+  gap: 0.75rem;
+}
+
+.header-buttons-controls > button{
+  width: 3rem;
+  height: 3rem;
+  padding: 1rem;
+
+  background: rgba($black, 0.3);
+  box-shadow: 0px 0px 0px 1px transparent inset;
+  border: none;
+  border-radius: 4px;
+
+  cursor: pointer;
+  transition: ease-out 300ms all;
+
+  svg{
+    opacity: 0.3;
+  }
+
+  &:hover{
+    background:rgba($black, 0.7);
+
+    svg{
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px){
+
+  .header-container{
+    padding-top: 0;
+    margin-top: -1.875rem;
+  }
+
+  .header-buttons-more > span{
+    display: block;
+  }
+
+  .header-buttons-controls{
+    display: flex;
+  }
+  
+}
